@@ -56,5 +56,5 @@ class TaskApiInsertTest extends TestCase
          $response->assertJson($api_json);
          $objeto = json_encode($response->getContent());
      }
-     
+
 }

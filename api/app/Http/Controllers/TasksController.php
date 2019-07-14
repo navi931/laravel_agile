@@ -15,7 +15,7 @@ class TasksController extends Controller
           [
             'tasks' => $tasks
           ]
-      ]);
+      ],200);
     }
     public function insert(Request $request)
     {
@@ -34,6 +34,7 @@ class TasksController extends Controller
           ]
       ],201);
     }
+
     public function modify($id)
     {
       $status = Task::find($id)['status'];
@@ -51,6 +52,16 @@ class TasksController extends Controller
           'data' =>
           [
             'tasks' => $task
+          ]
+      ],201);
+    }
+
+    public function delete(Request $request)
+    {
+      return response()->json([
+          'data' =>
+          [
+            'tasks' => []
           ]
       ],201);
     }

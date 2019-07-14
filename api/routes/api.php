@@ -16,3 +16,4 @@ use Illuminate\Http\Request;
 Route::get('/tasks', 'TasksController@index');
 Route::post('/tasks', 'TasksController@insert');
 Route::put('/tasks/{id}', 'TasksController@modify');
+Route::delete('/tasks', 'TasksController@delete');
